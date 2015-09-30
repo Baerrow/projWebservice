@@ -1,0 +1,30 @@
+genres:
+    path:     /
+    defaults: { _controller: "AppBundle:Genre:index" }
+
+genres_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Genre:show" }
+
+genres_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Genre:new" }
+
+genres_create:
+    path:     /create
+    defaults: { _controller: "AppBundle:Genre:create" }
+    methods:  POST
+
+genres_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Genre:edit" }
+
+genres_update:
+    path:     /{id}/update
+    defaults: { _controller: "AppBundle:Genre:update" }
+    methods:  [POST, PUT]
+
+genres_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Genre:delete" }
+    methods:  [POST, DELETE]

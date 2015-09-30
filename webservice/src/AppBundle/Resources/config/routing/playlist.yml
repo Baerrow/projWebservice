@@ -1,0 +1,30 @@
+playlists:
+    path:     /
+    defaults: { _controller: "AppBundle:Playlist:index" }
+
+playlists_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Playlist:show" }
+
+playlists_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Playlist:new" }
+
+playlists_create:
+    path:     /create
+    defaults: { _controller: "AppBundle:Playlist:create" }
+    methods:  POST
+
+playlists_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Playlist:edit" }
+
+playlists_update:
+    path:     /{id}/update
+    defaults: { _controller: "AppBundle:Playlist:update" }
+    methods:  [POST, PUT]
+
+playlists_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Playlist:delete" }
+    methods:  [POST, DELETE]

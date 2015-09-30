@@ -1,0 +1,251 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Audio
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="AppBundle\Entity\AudioRepository")
+ */
+class Audio
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Name", type="string", length=255, unique=true)
+     */
+    private $name;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Number", type="float")
+     */
+    private $number;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="Saga", type="boolean")
+     */
+    private $saga;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Genre", type="string", length=255)
+     */
+    private $genre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Author", type="string", length=255)
+     */
+    private $author;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="UploadBy", type="string", length=255)
+     */
+    private $uploadBy;
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Audio
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set number
+     *
+     * @param float $number
+     *
+     * @return Audio
+     */
+    public function setNumber($number)
+    {
+        $this->number = $number;
+
+        return $this;
+    }
+
+    /**
+     * Get number
+     *
+     * @return float
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Audio
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set saga
+     *
+     * @param boolean $saga
+     *
+     * @return Audio
+     */
+    public function setSaga($saga)
+    {
+        $this->saga = $saga;
+
+        return $this;
+    }
+
+    /**
+     * Get saga
+     *
+     * @return boolean
+     */
+    public function getSaga()
+    {
+        return $this->saga;
+    }
+
+    /**
+     * Set genre
+     *
+     * @param string $genre
+     *
+     * @return Audio
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return string
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+
+    /**
+     * Set author
+     *
+     * @param string $author
+     *
+     * @return Audio
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return string
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * Set uploadBy
+     *
+     * @param string $uploadBy
+     *
+     * @return Audio
+     */
+    public function setUploadBy($uploadBy)
+    {
+        $this->uploadBy = $uploadBy;
+
+        return $this;
+    }
+
+    /**
+     * Get uploadBy
+     *
+     * @return string
+     */
+    public function getUploadBy()
+    {
+        return $this->uploadBy;
+    }
+}
+
