@@ -66,6 +66,13 @@ class Audio
     /**
      * @var string
      *
+     * @ORM\Column(name="Link", type="string", length=510, unique=true)
+     */
+    private $link;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="UploadBy", type="string", length=255)
      */
     private $uploadBy;
@@ -246,6 +253,30 @@ class Audio
     public function getUploadBy()
     {
         return $this->uploadBy;
+    }
+
+    /**
+     * Set link
+     *
+     * @param string $link
+     *
+     * @return Audio
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+
+        return $this;
+    }
+
+    /**
+     * Get link
+     *
+     * @return string
+     */
+    public function getLink()
+    {
+        return $this->link;
     }
 }
 

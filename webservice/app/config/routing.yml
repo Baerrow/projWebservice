@@ -1,3 +1,20 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+app_users:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /users
+
+app_playlists:
+    resource: "@AppBundle/Resources/config/routing/playlist.yml"
+    prefix:   /playlists
+
+app_genres:
+    resource: "@AppBundle/Resources/config/routing/genre.yml"
+    prefix:   /genres
+
+app_authors:
+    resource: "@AppBundle/Resources/config/routing/author.yml"
+    prefix:   /authors
+
+app_audios:
+    resource: "@AppBundle/Resources/config/routing/audio.yml"
+    prefix:   /audios
+
