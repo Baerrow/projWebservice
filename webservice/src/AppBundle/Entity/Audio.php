@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Audio
@@ -25,6 +26,7 @@ class Audio
      * @var string
      *
      * @ORM\Column(name="Name", type="string", length=255, unique=true)
+     * @Assert\NotBlank()
      */
     private $name;
 
@@ -39,6 +41,7 @@ class Audio
      * @var string
      *
      * @ORM\Column(name="Description", type="text")
+     * @Assert\NotBlank()
      */
     private $description;
 
@@ -60,13 +63,15 @@ class Audio
      * @var guid
      *
      * @ORM\Column(name="Author", type="guid", length=255)
+     * @Assert\NotBlank()
      */
     private $author;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Link", type="string", length=510, unique=true)
+     * @ORM\Column(name="Link", type="text", unique=true)
+     * @Assert\NotBlank()
      */
     private $link;
 

@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Playlist
@@ -32,6 +33,7 @@ class Playlist
      * @var array
      *
      * @ORM\Column(name="Content", type="json_array")
+     * @Assert\NotBlank()
      */
     private $content;
 

@@ -18,3 +18,6 @@ app_audios:
     resource: "@AppBundle/Resources/config/routing/audio.yml"
     prefix:   /audios
 
+app_login:
+    resource: "@AppBundle/Resources/config/routing/security.yml"
+    prefix:   /

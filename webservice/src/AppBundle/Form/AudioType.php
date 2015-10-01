@@ -21,6 +21,7 @@ class AudioType extends AbstractType
             ->add('saga')
             ->add('genre')
             ->add('author')
+            ->add('link')
             ->add('uploadBy')
         ;
     }
