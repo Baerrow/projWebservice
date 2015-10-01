@@ -32,7 +32,6 @@ class AuthorController extends Controller
     /**
      * Creates a new Author entity.
      *
-     * @Method("POST")
      */
     public function createAction(Request $request)
     {
@@ -91,7 +90,6 @@ class AuthorController extends Controller
     /**
      * Finds and displays a Author entity.
      *
-     * @Method("GET")
      */
     public function showAction($id)
     {
@@ -156,7 +154,6 @@ class AuthorController extends Controller
     /**
      * Edits an existing Author entity.
      *
-     * @Method("PUT")
      */
     public function updateAction(Request $request, $id)
     {
@@ -187,7 +184,6 @@ class AuthorController extends Controller
     /**
      * Deletes a Author entity.
      *
-     * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
     {

@@ -32,7 +32,6 @@ class AudioController extends Controller
     /**
      * Creates a new Audio entity.
      *
-     * @Method("POST")
      */
     public function createAction(Request $request)
     {
@@ -91,7 +90,6 @@ class AudioController extends Controller
     /**
      * Finds and displays a Audio entity.
      *
-     * @Method("GET")
      */
     public function showAction($id)
     {
@@ -156,7 +154,6 @@ class AudioController extends Controller
     /**
      * Edits an existing Audio entity.
      *
-     * @Method("PUT")
      */
     public function updateAction(Request $request, $id)
     {
@@ -187,7 +184,6 @@ class AudioController extends Controller
     /**
      * Deletes a Audio entity.
      *
-     * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
     {

@@ -3,7 +3,7 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use AppBundle\Form\Type\RegistrationType;
+use AppBundle\Form\RegistrationType;
 use AppBundle\Form\Model\Registration;
 
 class AccountController extends Controller
@@ -16,7 +16,7 @@ class AccountController extends Controller
         ));
 
         return $this->render(
-            'AppBundle:Account:register.html.twig',
+            'AppBundle:User:register.html.twig',
             array('form' => $form->createView())
         );
     }
@@ -39,7 +39,7 @@ class AccountController extends Controller
 	    }
 
 	    return $this->render(
-	        'AppBundle:Account:register.html.twig',
+	        'AppBundle:User:register.html.twig',
 	        array('form' => $form->createView())
 	    );
 	}
