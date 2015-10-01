@@ -17,4 +17,3 @@ app_authors:
 app_audios:
     resource: "@AppBundle/Resources/config/routing/audio.yml"
     prefix:   /audios
-

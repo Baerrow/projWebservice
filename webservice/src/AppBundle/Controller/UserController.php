@@ -32,6 +32,7 @@ class UserController extends Controller
     /**
      * Creates a new User entity.
      *
+     * @Method("POST")
      */
     public function createAction(Request $request)
     {
@@ -90,6 +91,7 @@ class UserController extends Controller
     /**
      * Finds and displays a User entity.
      *
+     * @Method("GET")
      */
     public function showAction($id)
     {
@@ -154,6 +156,7 @@ class UserController extends Controller
     /**
      * Edits an existing User entity.
      *
+     * @Method("PUT")
      */
     public function updateAction(Request $request, $id)
     {
@@ -184,6 +187,7 @@ class UserController extends Controller
     /**
      * Deletes a User entity.
      *
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
     {

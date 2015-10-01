@@ -32,6 +32,7 @@ class PlaylistController extends Controller
     /**
      * Creates a new Playlist entity.
      *
+     * @Method("POST")
      */
     public function createAction(Request $request)
     {
@@ -90,6 +91,7 @@ class PlaylistController extends Controller
     /**
      * Finds and displays a Playlist entity.
      *
+     * @Method("GET")
      */
     public function showAction($id)
     {
@@ -154,6 +156,7 @@ class PlaylistController extends Controller
     /**
      * Edits an existing Playlist entity.
      *
+     * @Method("PUT")
      */
     public function updateAction(Request $request, $id)
     {
@@ -184,6 +187,7 @@ class PlaylistController extends Controller
     /**
      * Deletes a Playlist entity.
      *
+     * @Method("DELETE")
      */
     public function deleteAction(Request $request, $id)
     {
