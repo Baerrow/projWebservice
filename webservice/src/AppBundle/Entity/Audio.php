@@ -48,9 +48,9 @@ class Audio
     /**
      * @var boolean
      *
-     * @ORM\Column(name="Saga", type="boolean")
+     * @ORM\Column(name="Saga", type="boolean", value="false")
      */
-    private $saga = false;
+    private $saga;
 
     /**
      * @var guid

@@ -19,5 +19,6 @@ app_audios:
     prefix:   /audios
 
 app_login:
-    resource: "@AppBundle/Resources/config/routing/security.yml"
+    resource: "@AppBundle/Resources/config/routing/login.yml"
     prefix:   /
+

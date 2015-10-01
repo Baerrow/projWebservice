@@ -46,21 +46,21 @@ class User
      *
      * @ORM\Column(name="IsAdmin", type="boolean")
      */
-    private $isAdmin;
+    private $isAdmin = false;
 
     /**
      * @var array
      *
      * @ORM\Column(name="Listen", type="json_array", nullable=true)
      */
-    private $listen;
+    private $listen = null;
 
     /**
      * @var array
      *
      * @ORM\Column(name="Uploaded", type="json_array", nullable=true)
      */
-    private $uploaded;
+    private $uploaded = null;
 
 
     /**

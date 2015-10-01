@@ -13,12 +13,6 @@ class Registration
      */
     protected $user;
 
-    /**
-     * @Assert\NotBlank()
-     * @Assert\True()
-     */
-    protected $termsAccepted;
-
     public function setUser(User $user)
     {
         $this->user = $user;
