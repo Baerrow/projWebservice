@@ -2,13 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}APPLICATION DE SAGA AUDIOS{% endblock %}</title>
         {% block stylesheets %}
         <link href="{{ asset('css/bootstrap.css') }}" type="text/css" rel="stylesheet" />{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         
     </head>
     <body>
+        
+        <ul class="nav nav-tabs">
+          <li><a href="{{ path('audios') }}" class="active">Audios</a></li>
+          <li><a href="{{ path('playlists') }}" class="active">Playlists</a></li>
+          <li><a href="{{ path('authors') }}" class="active">Auteurs</a></li>
+          <li><a href="{{ path('genres') }}" class="active">Genres</a></li>
+        </ul>
+
         <div class="container">
         {% block body %}{% endblock %}
         </div>
