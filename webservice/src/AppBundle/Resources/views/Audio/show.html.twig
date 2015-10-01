@@ -1,9 +1,9 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Audio</h1>
+    <h1>{{ entity.name }}</h1>
 
-    <table class="record_properties">
+    <table class="record_properties table-striped table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -34,23 +34,33 @@
                 <td>{{ entity.author }}</td>
             </tr>
             <tr>
+                <audio id="player" src={{ entity.link }}></audio></th>
+                <th>State</th>
+                <td>
+                    <button class="btn" onclick="document.getElementById('player').pauselol()">Play</button>
+                    <button class="btn" onclick="document.getElementById('player').pause()">Pause</button>
+
+                    
+                </td> 
+            </tr>
+            <tr>
                 <th>Uploadby</th>
                 <td>{{ entity.uploadBy }}</td>
             </tr>
         </tbody>
     </table>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('audios') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('audios_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+    <div class="btn">{{ form(delete_form) }}</div>
+
+    <a href="{{ path('audios_edit' , { 'id': entity.id }) }}" > 
+        <button class="btn">Editer</button>
+    </a>
+
+    <a href="{{ path('audios') }}" > 
+        <button class="btn">Retour</button>
+    </a>
+
+    {#{{ form_label(form.name, 'Your Name', {'label_attr': {'class': 'foo'}}) }}#}
+
 {% endblock %}
+

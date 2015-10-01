@@ -1,16 +1,16 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Audio edit</h1>
+    <h1>{{ entity.name }}</h1>
 
+
+	{% form_theme edit_form 'bootstrap_3_horizontal_layout.html.twig' %}
     {{ form(edit_form) }}
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('audios') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+    <a href="{{ path('audios') }}" > 
+        <button class="btn">Retour</button>
+    </a>
+
+   {#} {{ form(delete_form) }}#}
+
 {% endblock %}
