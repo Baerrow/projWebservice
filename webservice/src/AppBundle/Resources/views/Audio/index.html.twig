@@ -2,8 +2,11 @@
 
 {% block body -%}
     <h1>Audio list</h1>
-
-    <table class="records_list">
+    <a href="{{ path('audios_new') }}" > 
+    <button  class="btn">Ajouter un nouvel audio</button>
+    </a>
+                
+    <table class="records_list" c>
         <thead>
             <tr>
                 <th>Id</th>
@@ -44,12 +47,4 @@
         {% endfor %}
         </tbody>
     </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('audios_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
     {% endblock %}

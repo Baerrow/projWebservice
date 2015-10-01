@@ -50,7 +50,7 @@ class Audio
      *
      * @ORM\Column(name="Saga", type="boolean")
      */
-    private $saga;
+    private $saga = false;
 
     /**
      * @var guid
