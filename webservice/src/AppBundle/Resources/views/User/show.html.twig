@@ -27,8 +27,12 @@
             </tr>
             <tr>
                 <th>Uploaded</th>
-                <td>{{ entity.uploaded }}</td>
             </tr>
+            {% if entity.uploaded != 0 %}
+                <td>{{ entity.uploaded }}</td>
+            {% else %}
+                <td>L'utilisateur n'a pas fait d'upload</td>
+            {% endif %}
         </tbody>
     </table>
 

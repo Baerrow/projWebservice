@@ -50,16 +50,16 @@ class Audio
     private $saga;
 
     /**
-     * @var string
+     * @var guid
      *
-     * @ORM\Column(name="Genre", type="string", length=255)
+     * @ORM\Column(name="Genre", type="guid", length=255)
      */
     private $genre;
 
     /**
-     * @var string
+     * @var guid
      *
-     * @ORM\Column(name="Author", type="string", length=255)
+     * @ORM\Column(name="Author", type="guid", length=255)
      */
     private $author;
 
@@ -71,9 +71,9 @@ class Audio
     private $link;
 
     /**
-     * @var string
+     * @var guid
      *
-     * @ORM\Column(name="UploadBy", type="string", length=255)
+     * @ORM\Column(name="UploadBy", type="guid", length=255)
      */
     private $uploadBy;
 
@@ -186,7 +186,7 @@ class Audio
     /**
      * Set genre
      *
-     * @param string $genre
+     * @param guid $genre
      *
      * @return Audio
      */
@@ -210,7 +210,7 @@ class Audio
     /**
      * Set author
      *
-     * @param string $author
+     * @param guid $author
      *
      * @return Audio
      */
@@ -224,7 +224,7 @@ class Audio
     /**
      * Get author
      *
-     * @return string
+     * @return guid
      */
     public function getAuthor()
     {
@@ -234,7 +234,7 @@ class Audio
     /**
      * Set uploadBy
      *
-     * @param string $uploadBy
+     * @param guid $uploadBy
      *
      * @return Audio
      */
@@ -248,7 +248,7 @@ class Audio
     /**
      * Get uploadBy
      *
-     * @return string
+     * @return guid
      */
     public function getUploadBy()
     {

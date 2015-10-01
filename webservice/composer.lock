@@ -4,9 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a6a450a88a70ec0f62348f20c076177a",
-    "content-hash": "97a65ddfd75e56eb06298c9192afa45f",
+    "hash": "48cbb88472f7f35b0185a6dd5ee06e45",
     "packages": [
+        {
+            "name": "braincrafted/bootstrap-bundle",
+            "version": "dev-master",
+            "target-dir": "Braincrafted/Bundle/BootstrapBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/braincrafted/bootstrap-bundle.git",
+                "reference": "dd53559cfe15428f07ac3681826573fab1557bd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/braincrafted/bootstrap-bundle/zipball/dd53559cfe15428f07ac3681826573fab1557bd9",
+                "reference": "dd53559cfe15428f07ac3681826573fab1557bd9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/console": "~2.3",
+                "symfony/finder": "~2.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3"
+            },
+            "require-dev": {
+                "knplabs/knp-menu": "~2.0@alpha",
+                "knplabs/knp-menu-bundle": "~2.0@alpha",
+                "knplabs/knp-paginator-bundle": "dev-master",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "3.7.*",
+                "symfony/assetic-bundle": "~2.3"
+            },
+            "suggest": {
+                "knplabs/knp-menu": "Required to use KnpMenuBundle.",
+                "knplabs/knp-menu-bundle": "BraincraftedBootstrapBundle styles the menus provided by KnpMenuBundle.",
+                "knplabs/knp-paginator-bundle": "BraincraftedBootstrapBundle styles the pagination provided by KnpPaginatorBundle.",
+                "twbs/bootstrap": "Twitter Bootstrap provides the assets (images, CSS and JS)"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Braincrafted\\Bundle\\BootstrapBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Eckerstorfer",
+                    "email": "florian@eckerstorfer.co",
+                    "homepage": "http://florian.ec"
+                }
+            ],
+            "description": "BraincraftedBootstrapBundle integrates Bootstrap into Symfony2 by providing templates, Twig extensions, services and commands.",
+            "keywords": [
+                "bootstrap"
+            ],
+            "time": "2015-04-15 11:59:36"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -768,6 +827,96 @@
                 "orm"
             ],
             "time": "2015-08-31 12:59:39"
+        },
+        {
+            "name": "evheniy/jquery-bundle",
+            "version": "1.4.3",
+            "target-dir": "Evheniy/JqueryBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/evheniy/JqueryBundle.git",
+                "reference": "41238858bd045a77d0fe6e6e97a467b46c396031"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/evheniy/JqueryBundle/zipball/41238858bd045a77d0fe6e6e97a467b46c396031",
+                "reference": "41238858bd045a77d0fe6e6e97a467b46c396031",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/assetic-bundle": "~2.5-dev",
+                "symfony/symfony": ">=2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Evheniy\\JqueryBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "evheniy",
+                    "homepage": "https://github.com/evheniy"
+                }
+            ],
+            "description": "The JqueryBundle adds the ability to add latest jQuery to your application.",
+            "keywords": [
+                "jquery",
+                "latest",
+                "symfony"
+            ],
+            "time": "2015-09-01 18:01:07"
+        },
+        {
+            "name": "evheniy/twitter-bootstrap-bundle",
+            "version": "1.3",
+            "target-dir": "Evheniy/TwitterBootstrapBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/evheniy/TwitterBootstrapBundle.git",
+                "reference": "e6cb3d023453e39f48e1b197db97f8e25de55d58"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/evheniy/TwitterBootstrapBundle/zipball/e6cb3d023453e39f48e1b197db97f8e25de55d58",
+                "reference": "e6cb3d023453e39f48e1b197db97f8e25de55d58",
+                "shasum": ""
+            },
+            "require": {
+                "evheniy/jquery-bundle": ">=1.0",
+                "php": ">=5.3.0",
+                "symfony/symfony": ">=2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Evheniy\\TwitterBootstrapBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "evheniy",
+                    "homepage": "https://github.com/evheniy"
+                }
+            ],
+            "description": "The TwitterBootstrapBundle adds the ability to add latest Twitter Bootstrap to your application.",
+            "keywords": [
+                "Symfony2",
+                "bootstrap",
+                "latest",
+                "twitter",
+                "twitter bootstrap"
+            ],
+            "time": "2015-05-05 17:20:08"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1696,7 +1845,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "braincrafted/bootstrap-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

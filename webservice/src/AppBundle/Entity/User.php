@@ -45,14 +45,14 @@ class User
     /**
      * @var array
      *
-     * @ORM\Column(name="Listen", type="json_array")
+     * @ORM\Column(name="Listen", type="json_array", nullable=true)
      */
     private $listen;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="Uploaded", type="array")
+     * @ORM\Column(name="Uploaded", type="json_array", nullable=true)
      */
     private $uploaded;
 

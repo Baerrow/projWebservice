@@ -31,7 +31,7 @@ class Playlist
     /**
      * @var array
      *
-     * @ORM\Column(name="Content", type="array")
+     * @ORM\Column(name="Content", type="json_array")
      */
     private $content;
 

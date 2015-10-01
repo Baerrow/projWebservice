@@ -16,7 +16,9 @@
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "braincrafted/bootstrap-bundle": "dev-master",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "evheniy/twitter-bootstrap-bundle": "1.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
