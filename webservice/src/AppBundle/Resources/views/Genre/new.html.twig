@@ -1,15 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Genre creation</h1>
+    <h1>Création de genre</h1>
 
+    {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
     {{ form(form) }}
+    
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('genres') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+    <a href="{{ path('genres') }}">
+        <button  class="btn">Retour</button>
+    </a>    
 {% endblock %}
