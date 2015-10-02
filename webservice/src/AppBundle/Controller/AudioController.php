@@ -19,6 +19,16 @@ class AudioController extends Controller
      * Lists all Audio entities.
      *
      */
+
+    /*public function clickAction()
+    {
+        if ($form->get('Recherche')->isValid())
+        {
+            echo '<input type="file" value="Rechercher">';
+        }
+    }*/
+
+    
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -27,7 +37,8 @@ class AudioController extends Controller
 
         return $this->render('AppBundle:Audio:index.html.twig', array(
             'entities' => $entities,
-        ));
+        ));       
+
     }
     /**
      * Creates a new Audio entity.
@@ -66,8 +77,12 @@ class AudioController extends Controller
             'action' => $this->generateUrl('audios_create'),
             'method' => 'POST',
         ));
+        echo    '<input type="file" id="RechercheBtn" class="btn"> 
+                <input type="button" class="btn" value="Upload">';
 
         $form->add('submit', 'submit', array('label' => 'Create'));
+
+
 
         return $form;
     }

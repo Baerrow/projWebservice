@@ -15,13 +15,14 @@ class AudioType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', 'text')
             ->add('number')
             ->add('description')
             ->add('saga')
             ->add('genre')
             ->add('author')
-            ->add('link')
+            ->add('link') 
+            ->add('Recherche', 'button')
             ->add('uploadBy')
         ;
     }
