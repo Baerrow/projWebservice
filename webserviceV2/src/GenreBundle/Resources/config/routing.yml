@@ -1,0 +1,3 @@
+genre:
+    resource: "@GenreBundle/Controller/"
+    type:     annotation

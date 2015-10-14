@@ -1,0 +1,3 @@
+audio:
+    resource: "@AudioBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,3 @@
+playlist:
+    resource: "@PlaylistBundle/Controller/"
+    type:     annotation

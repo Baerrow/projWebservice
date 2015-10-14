@@ -1,0 +1,3 @@
+author:
+    resource: "@AuthorBundle/Controller/"
+    type:     annotation

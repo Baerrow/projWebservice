@@ -1,0 +1,4 @@
+services:
+#    genre.example:
+#        class: GenreBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

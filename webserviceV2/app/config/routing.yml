@@ -1,0 +1,23 @@
+login:
+    resource: "@LoginBundle/Resources/config/routing.yml"
+    prefix:   /
+
+audio:
+    resource: "@AudioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+playlist:
+    resource: "@PlaylistBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+genre:
+    resource: "@GenreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+author:
+    resource: "@AuthorBundle/Resources/config/routing.yml"
+    prefix:   /
