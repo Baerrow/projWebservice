@@ -5,6 +5,8 @@ namespace AudioBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use AuthorBundle\Entity\Author;
+use AuthorBundle\Form\AuthorType;
 
 class AudioType extends AbstractType
 {
@@ -20,9 +22,9 @@ class AudioType extends AbstractType
             ->add('description')
             ->add('isSaga')
             ->add('genre')
-            ->add('author')
             ->add('link')
             ->add('uploadedBy')
+            ->add('authors', 'collection', array('type' => new AuthorType()))
         ;
     }
     

@@ -24,16 +24,9 @@ class Author
     /**
      * @var string
      *
-     * @ORM\Column(name="Firstname", type="string", length=255)
+     * @ORM\Column(name="Name", type="string", length=255)
      */
-    private $firstname;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Lastname", type="string", length=255)
-     */
-    private $lastname;
+    private $name;
 
     /**
      * @var string
@@ -47,7 +40,7 @@ class Author
      *
      * @ORM\Column(name="Production", type="json_array", nullable=true)
      */
-    private $production = null;
+    // private $production = null;
 
 
     /**
@@ -61,53 +54,29 @@ class Author
     }
 
     /**
-     * Set firstname
+     * Set name
      *
-     * @param string $firstname
+     * @param string $name
      *
      * @return Author
      */
-    public function setFirstname($firstname)
+    public function setName($name)
     {
-        $this->firstname = $firstname;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get firstname
+     * Get name
      *
      * @return string
      */
-    public function getFirstname()
+    public function getName()
     {
-        return $this->firstname;
+        return $this->name;
     }
-
-    /**
-     * Set lastname
-     *
-     * @param string $lastname
-     *
-     * @return Author
-     */
-    public function setLastname($lastname)
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    /**
-     * Get lastname
-     *
-     * @return string
-     */
-    public function getLastname()
-    {
-        return $this->lastname;
-    }
-
+    
     /**
      * Set description
      *
@@ -139,20 +108,20 @@ class Author
      *
      * @return Author
      */
-    public function setProduction($production)
-    {
-        $this->production = $production;
+    // public function setProduction($production)
+    // {
+    //     $this->production = $production;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     /**
      * Get production
      *
      * @return array
      */
-    public function getProduction()
-    {
-        return $this->production;
-    }
+    // public function getProduction()
+    // {
+    //     return $this->production;
+    // }
 }

@@ -30,16 +30,18 @@
                 <td>{{ entity.genre }}</td>
             </tr>
             <tr>
-                <th>Author</th>
-                <td>{{ entity.author }}</td>
-            </tr>
-            <tr>
                 <th>Link</th>
                 <td>{{ entity.link }}</td>
             </tr>
             <tr>
                 <th>Uploadedby</th>
                 <td>{{ entity.uploadedBy }}</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                {% for author in entity.authors %}
+                    <td>{{ author.name }}{% if not loop.last %}, {% endif %}</td>
+                {% endfor %}
             </tr>
         </tbody>
     </table>

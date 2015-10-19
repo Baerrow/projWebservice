@@ -141,6 +141,10 @@ class AudioController extends Controller
             throw $this->createNotFoundException('Unable to find Audio entity.');
         }
 
+        $author_list = $em->getRepository('AuthorBundle:Author')->findAll();
+
+        
+
         $editForm = $this->createEditForm($entity);
         $deleteForm = $this->createDeleteForm($id);
 

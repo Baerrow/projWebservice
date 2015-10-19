@@ -12,6 +12,18 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Audio
 {
+    public function __construct($name, $number, $description, $isSaga, $genre, $link, $uploadedBy)
+    {
+        $this->name = $name;
+        $this->number = $number;
+        $this->description = $description;
+        $this->isSaga = $isSaga;
+        $this->genre = $genre;
+        $this->authors = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->link = $link;
+        $this->uploadedBy = $uploadedBy;
+    }
+
     /**
      * @var integer
      *
@@ -57,11 +69,9 @@ class Audio
     private $genre;
 
     /**
-     * @var guid
-     *
-     * @ORM\Column(name="Author", type="guid")
+     * @ORM\ManyToMany(targetEntity="AuthorBundle\Entity\Author", cascade={"persist"})
      */
-    private $author;
+    private $authors;
 
     /**
      * @var string
@@ -209,27 +219,37 @@ class Audio
     }
 
     /**
-     * Set author
+     * Add authors
      *
-     * @param guid $author
-     *
-     * @return Audio
+     * @param AuthorBundle\Entity\Author $authors
      */
-    public function setAuthor($author)
+    public function addCategorie(AuthorBundle\Entity\Author $author)
     {
-        $this->author = $author;
-
-        return $this;
+        $this->authors[] = $author;
     }
 
     /**
-     * Get author
+     * Remove authors
      *
-     * @return guid
+     * @param AuthorBundle\Entity\Author $authors
      */
-    public function getAuthor()
+    public function removeCategorie(\Sdz\BlogBundle\Entity\Categorie $categorie)
     {
-        return $this->author;
+        $this->authors->removeElement($author);
+    }
+
+    /**
+     * Get authors
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getAuthors()
+    {
+        return $this->authors->toArray();
+    }
+
+    public function getAuthorsCollection(){
+        return $this->authors;
     }
 
     /**

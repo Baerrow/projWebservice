@@ -12,9 +12,9 @@
                 <th>Description</th>
                 <th>Issaga</th>
                 <th>Genre</th>
-                <th>Author</th>
                 <th>Link</th>
                 <th>Uploadedby</th>
+                <th>Author</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -27,9 +27,11 @@
                 <td>{{ entity.description }}</td>
                 <td>{{ entity.isSaga }}</td>
                 <td>{{ entity.genre }}</td>
-                <td>{{ entity.author }}</td>
                 <td>{{ entity.link }}</td>
                 <td>{{ entity.uploadedBy }}</td>
+                {% for author in entity.authors %}
+                    <td>{{ author.name }}{% if not loop.last %}, {% endif %}</td>
+                {% endfor %}
                 <td>
                 <ul>
                     <li>
