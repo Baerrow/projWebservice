@@ -6,7 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use AuthorBundle\Entity\Author;
-use AuthorBundle\Form\AuthorType;
+// use AuthorBundle\Form\AuthorType;
+use Doctrine\ORM\EntityRepository;
 
 class AudioType extends AbstractType
 {
@@ -17,14 +18,29 @@ class AudioType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('number')
-            ->add('description')
-            ->add('isSaga')
-            ->add('genre')
-            ->add('link')
-            ->add('uploadedBy')
-            ->add('authors', 'collection', array('type' => new AuthorType()))
+            ->add('name', 'text', array('label' => 'Nom de l\'audio :'))
+            ->add('number', 'text', array('label' => 'Numéro de l\'audio dans sa série :'))
+            ->add('description', 'textarea', array('label' => 'Description :'))
+            ->add('isSaga', 'checkbox', array(
+                'label' => 'Fait-il parti d\'une saga ?',
+                'required'  => false
+                )
+            )
+            ->add('genre', 'choice', array(
+                'label' => 'Genre',
+                'choices' => array(
+                    'fantasy' => 'fantasy',
+                    'horreur' => 'horreur')
+                )
+            )
+            ->add('link', 'text', array('label' => 'Lien de l\'audio :'))
+            ->add('uploadedBy', 'text', array('label' => 'Proposé par :'))
+            ->add('authors', 'entity', array(
+                'class' => 'AuthorBundle:Author',
+                'choice_label' => 'name',
+                'multiple' => true
+                )
+            )
         ;
     }
     

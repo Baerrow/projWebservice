@@ -35,13 +35,6 @@ class Author
      */
     private $description;
 
-    /**
-     * @var array
-     *
-     * @ORM\Column(name="Production", type="json_array", nullable=true)
-     */
-    // private $production = null;
-
 
     /**
      * Get id
@@ -100,28 +93,4 @@ class Author
     {
         return $this->description;
     }
-
-    /**
-     * Set production
-     *
-     * @param array $production
-     *
-     * @return Author
-     */
-    // public function setProduction($production)
-    // {
-    //     $this->production = $production;
-
-    //     return $this;
-    // }
-
-    /**
-     * Get production
-     *
-     * @return array
-     */
-    // public function getProduction()
-    // {
-    //     return $this->production;
-    // }
 }

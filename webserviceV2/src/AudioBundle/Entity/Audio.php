@@ -12,16 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Audio
 {
-    public function __construct($name, $number, $description, $isSaga, $genre, $link, $uploadedBy)
+    public function __construct()
     {
-        $this->name = $name;
-        $this->number = $number;
-        $this->description = $description;
-        $this->isSaga = $isSaga;
-        $this->genre = $genre;
+        $this->genres = new \Doctrine\Common\Collections\ArrayCollection();
         $this->authors = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->link = $link;
-        $this->uploadedBy = $uploadedBy;
     }
 
     /**
@@ -57,16 +51,14 @@ class Audio
     /**
      * @var boolean
      *
-     * @ORM\Column(name="IsSaga", type="boolean")
+     * @ORM\Column(name="IsSaga", type="boolean", nullable=true)
      */
     private $isSaga = false;
 
     /**
-     * @var guid
-     *
-     * @ORM\Column(name="Genre", type="guid")
+     * @ORM\ManyToMany(targetEntity="GenreBundle\Entity\Genre", cascade={"persist"})
      */
-    private $genre;
+    private $genres;
 
     /**
      * @ORM\ManyToMany(targetEntity="AuthorBundle\Entity\Author", cascade={"persist"})
@@ -195,27 +187,33 @@ class Audio
     }
 
     /**
-     * Set genre
+     * Add genres
      *
-     * @param guid $genre
-     *
-     * @return Audio
+     * @param GenreBundle\Entity\Genre $genres
      */
-    public function setGenre($genre)
+    public function addGenre(GenreBundle\Entity\Genre $genre)
     {
-        $this->genre = $genre;
-
-        return $this;
+        $this->genres[] = $genre;
     }
 
     /**
-     * Get genre
+     * Remove genres
      *
-     * @return guid
+     * @param GenreBundle\Entity\Genre $genres
      */
-    public function getGenre()
+    public function removeGenre(GenreBundle\Entity\Genre $genre)
     {
-        return $this->genre;
+        $this->genres->removeElement($genre);
+    }
+
+    /**
+     * Get genres
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getGenres()
+    {
+        return $this->genres;
     }
 
     /**
@@ -223,7 +221,7 @@ class Audio
      *
      * @param AuthorBundle\Entity\Author $authors
      */
-    public function addCategorie(AuthorBundle\Entity\Author $author)
+    public function addAuthor(AuthorBundle\Entity\Author $author)
     {
         $this->authors[] = $author;
     }
@@ -233,7 +231,7 @@ class Audio
      *
      * @param AuthorBundle\Entity\Author $authors
      */
-    public function removeCategorie(\Sdz\BlogBundle\Entity\Categorie $categorie)
+    public function removeAuthor(AuthorBundle\Entity\Author $author)
     {
         $this->authors->removeElement($author);
     }
@@ -245,10 +243,6 @@ class Audio
      */
     public function getAuthors()
     {
-        return $this->authors->toArray();
-    }
-
-    public function getAuthorsCollection(){
         return $this->authors;
     }
 

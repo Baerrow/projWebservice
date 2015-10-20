@@ -31,9 +31,9 @@ class Genre
     /**
      * @var array
      *
-     * @ORM\Column(name="AssociateAudio", type="json_array", nullable=true)
+     * @ORM\Column(name="AssociatedAudio", type="json_array", nullable=true)
      */
-    private $associateAudio = null;
+    // private $associatedAudio = null;
 
 
     /**
@@ -77,20 +77,15 @@ class Genre
      *
      * @return Genre
      */
-    public function setAssociateAudio($associateAudio)
-    {
-        $this->associateAudio = $associateAudio;
-
-        return $this;
-    }
+    // public function 
 
     /**
      * Get associateAudio
      *
      * @return array
      */
-    public function getAssociateAudio()
-    {
-        return $this->associateAudio;
-    }
+    // public function getAssociateAudio()
+    // {
+    //     return $this->associateAudio;
+    // }
 }
