@@ -2,8 +2,11 @@
 
 {% block body -%}
     <h1>Audio list</h1>
+    <a href="{{ path('audios_new') }}" > 
+        <button class="btn">Ajouter un nouvel audio</button>
+    </a>
 
-    <table class="records_list">
+    <table class="records_list table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -21,12 +24,12 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('audios_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.name }}</td>
+                <td>{{ entity.id }}</a></td>
+                <td><a href="{{ path('audios_show', { 'id': entity.id }) }}">{{ entity.name }}</td>
                 <td>{{ entity.number }}</td>
                 <td>{{ entity.description }}</td>
                 <td>{{ entity.isSaga }}</td>
-                <td>{{ entity.genre }}</td>
+                <td>{#{{ entity.genre }}#}</td>
                 <td>{{ entity.link }}</td>
                 <td>{{ entity.uploadedBy }}</td>
                 {% for author in entity.authors %}
@@ -34,9 +37,6 @@
                 {% endfor %}
                 <td>
                 <ul>
-                    <li>
-                        <a href="{{ path('audios_show', { 'id': entity.id }) }}">show</a>
-                    </li>
                     <li>
                         <a href="{{ path('audios_edit', { 'id': entity.id }) }}">edit</a>
                     </li>
@@ -46,12 +46,4 @@
         {% endfor %}
         </tbody>
     </table>
-
-        <ul>
-        <li>
-            <a href="{{ path('audios_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
-    {% endblock %}
+{% endblock %}
